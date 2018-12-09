@@ -69,7 +69,7 @@ components/
 
 The working structure of the file as below <br />
 
-\<menu name> ,  \<data_type>, \<the value name>, \<data range INTEGER>, \<default_val>, \<help_prompt>, \<promp_message>
+CONFIG \<menu name> ,  \<data_type>, \<the value name>, \<data range INTEGER>, \<default_val>, \<help_prompt>, \<promp_message>
 ```
 config MWIFI_VOTE_PERCENTAGE
     int "Vote percentage threshold above which the node becoms a root"
@@ -80,3 +80,13 @@ config MWIFI_VOTE_PERCENTAGE
 ```
 
 - Further information about ```Kconfig``` found here https://www.kernel.org/doc/Documentation/kbuild/kconfig-language.txt
+
+
+## How to flash ?
+
+1. Using ```make menuconfig``` and configure serial port & subsequently ```make flash```
+
+2. Straight flash by indicating the port over  CLI arguments :
+```
+make flash ESPPORT=<serial port> ESPBAUD=<baud rate>
+```
