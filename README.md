@@ -32,7 +32,7 @@ COMPONENT_SRCDIRS := .
 COMPONENT_ADD_INCLUDEDIRS := .
  ```
  
-The tree look of the directory components 
+The tree look of the directory components with the source  and it's header files
 ```
 components/
 ├── component.mk
