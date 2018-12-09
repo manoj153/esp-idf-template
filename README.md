@@ -10,7 +10,7 @@ Unless required by applicable law or agreed to in writing, this
 software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
 CONDITIONS OF ANY KIND, either express or implied.*
 
-Author : Manojkumar 
+##### Author : Manojkumar 
 
 # Notes for starting new ESP32 Projects
 
@@ -67,7 +67,7 @@ components/
 
 - The ```Kconfig``` file located inside **components** directory responsible to allow add our own custom set of configuration options and the value types in the list
 
-The working structure of the file as below <br />
+The working structure of the file as below: <br />
 
 CONFIG \<menu name> ,  \<data_type>, \<the value name>, \<data range INTEGER>, \<default_val>, \<help_prompt>, \<promp_message>
 ```
@@ -89,4 +89,10 @@ config MWIFI_VOTE_PERCENTAGE
 2. Straight flash by indicating the port over  CLI arguments :
 ```
 make flash ESPPORT=<serial port> ESPBAUD=<baud rate>
+```
+
+## How to view the linked sections in memory (flash, ram etc) ?
+
+```
+ xtensa-esp32-elf-objdump --headers <file.elf>
 ```
