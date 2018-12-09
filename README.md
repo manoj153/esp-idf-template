@@ -32,7 +32,7 @@ COMPONENT_SRCDIRS := .
 COMPONENT_ADD_INCLUDEDIRS := .
  ```
  
-The tree look of the directory components with the source  and it's header files
+The tree look of the directory **components** with the source  and it's header files
 ```
 components/
 ├── component.mk
@@ -43,5 +43,22 @@ components/
 
 
 ## How to add modules of large library to compile during ```make flash``` ?
-- Put source inside a foldering containing all the depedent C codes
+- The sources are inside a each folder containing all the depedent C codes and headers
 
+The tree look of the directory **components** with the source  and it's header files
+
+```
+components/
+│
+├── spidriver
+│   ├── component.mk
+│   ├── spi_master_lobo.c
+│   └── spi_master_lobo.h
+├── spiffs
+│   ├── component.mk
+│   └── esp_spiffs.c
+└── tft
+    ├── component.mk
+    ├── tftspi.c
+    └── tftspi.c
+```
