@@ -62,3 +62,21 @@ components/
     ├── tftspi.c
     └── tftspi.c
 ```
+
+## How to create or modify the config that appears when ```make menuconfig```
+
+- The ```Kconfig``` file located inside **components** directory responsible to allow add our own custom set of configuration options and the value types in the list
+
+The working structure of the file as below <br />
+
+\<menu name> ,  \<data_type>, \<the value name>, \<data range INTEGER>, \<default_val>, \<help_prompt>, \<promp_message>
+```
+config MWIFI_VOTE_PERCENTAGE
+    int "Vote percentage threshold above which the node becoms a root"
+    range 1 100
+    default 90
+    help
+        Vote percentage threshold above which the node becoms a root
+```
+
+- Further information about ```Kconfig``` found here https://www.kernel.org/doc/Documentation/kbuild/kconfig-language.txt
